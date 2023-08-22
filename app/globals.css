@@ -2,26 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.app {
+	@apply z-10 w-full flex-center flex-col mx-auto sm:px-16 px-6 lg:px-4;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.blue_gradient {
+	@apply bg-gradient-to-r from-cyan-800 via-sky-700 to-blue-500 bg-clip-text text-transparent;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.head_text {
+	@apply text-5xl lg:text-8xl font-extrabold leading-[1.15] text-slate-800 sm:text-6xl;
+}
+.desc {
+	@apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl lg:text-3xl;
+}
+.flex-center {
+	@apply flex justify-center items-center;
 }

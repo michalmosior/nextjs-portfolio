@@ -1,3 +1,4 @@
+import Nav from '@/components/Navigation/Nav';
 import './globals.css';
 import type { Metadata } from 'next';
 
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className='app'>{children}</body>
+			<body className='app'>
+				<Nav />
+				{children}
+			</body>
 		</html>
 	);
 }

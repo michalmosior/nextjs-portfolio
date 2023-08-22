@@ -14,6 +14,18 @@
 .desc {
 	@apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl lg:text-3xl;
 }
+.dropdown {
+	@apply absolute left-[-24px] h-screen top-0 w-screen px-6 pb-20 bg-white flex flex-col gap-5 justify-between items-start z-0;
+}
+.dropdown_link {
+	@apply text-3xl font-inter text-gray-700 hover:text-gray-500 font-light;
+}
+.menu_link {
+	@apply flex items-center justify-center text-3xl font-inter text-gray-700 hover:text-gray-500 font-light;
+}
 .flex-center {
 	@apply flex justify-center items-center;
+}
+.flex-between {
+	@apply flex justify-between items-center;
 }

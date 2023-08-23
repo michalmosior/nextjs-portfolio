@@ -5,6 +5,12 @@ import { useState } from 'react';
 import Logo from './Logo';
 import Socials from '../Socials';
 
+const navigation = [
+	{ name: 'About me', href: '/#aboutme' },
+	{ name: 'Projects', href: '/#projects' },
+	{ name: 'Contact', href: '/#contact' },
+];
+
 const Nav = () => {
 	const [toggleDropdown, setToggleDropdown] = useState(false);
 
@@ -13,15 +19,11 @@ const Nav = () => {
 			<Logo />
 			<div className='sm:flex hidden'>
 				<div className='flex gap-3 md:gap-5'>
-					<Link href='/#aboutme' className='menu_link'>
-						About me
-					</Link>
-					<Link href='/#projects' className='menu_link'>
-						Projects
-					</Link>
-					<Link href='/#contact' className='menu_link'>
-						Contact
-					</Link>
+					{navigation.map((item) => (
+						<Link key={item.href} href={item.href} className='menu_link'>
+							{item.name}
+						</Link>
+					))}
 				</div>
 			</div>
 
@@ -58,27 +60,16 @@ const Nav = () => {
 								</button>
 							</div>
 							<div className='flex flex-col gap-20'>
-								<Link
-									href='/#aboutme'
-									className='dropdown_link'
-									onClick={() => setToggleDropdown(false)}
-								>
-									About me
-								</Link>
-								<Link
-									href='/#projects'
-									className='dropdown_link'
-									onClick={() => setToggleDropdown(false)}
-								>
-									Projects
-								</Link>
-								<Link
-									href='/#contact'
-									className='dropdown_link'
-									onClick={() => setToggleDropdown(false)}
-								>
-									Contact
-								</Link>
+								{navigation.map((item) => (
+									<Link
+										key={item.href}
+										href={item.href}
+										className='dropdown_link'
+										onClick={() => setToggleDropdown(false)}
+									>
+										{item.name}
+									</Link>
+								))}
 								<Socials />
 							</div>
 						</div>

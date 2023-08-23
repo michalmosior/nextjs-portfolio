@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Socials = () => {
 	return (
-		<div className='flex flex-row'>
+		<div className='flex flex-row animate-fade-in'>
 			<Link href='#'>
 				<svg
 					className='w-16 lg:w-24 h-16 lg:h-24'

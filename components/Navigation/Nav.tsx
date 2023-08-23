@@ -60,11 +60,16 @@ const Nav = () => {
 								</button>
 							</div>
 							<div className='flex flex-col gap-20'>
-								{navigation.map((item) => (
+								{navigation.map((item, i) => (
 									<Link
 										key={item.href}
 										href={item.href}
-										className='dropdown_link'
+										className='dropdown_link animate-fade-right'
+										style={{
+											['animation-duration' as any]: `${
+												i === 0 ? '0.6' : `${i === 1 ? '0.9' : '1.2'}`
+											}s`,
+										}}
 										onClick={() => setToggleDropdown(false)}
 									>
 										{item.name}

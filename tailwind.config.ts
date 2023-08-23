@@ -8,7 +8,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				satoshi: ['Satoshi', 'sans-serif'],
+				chivo: ['Chivo Mono', 'monospace'],
 				inter: ['Inter', 'sans-serif'],
 			},
 			height: {

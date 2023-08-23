@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;400;500;700&display=swap');
 .app {
 	@apply z-10 w-full flex-center flex-col mx-auto sm:px-16 px-6 lg:px-4;
 }
@@ -18,10 +18,10 @@
 	@apply absolute left-[-24px] h-screen top-0 w-screen px-6 pb-20 bg-white flex flex-col gap-5 justify-between items-start z-0;
 }
 .dropdown_link {
-	@apply text-3xl font-inter text-gray-700 hover:text-gray-500 font-light;
+	@apply text-3xl font-chivo text-gray-700 hover:text-gray-500 font-light;
 }
 .menu_link {
-	@apply flex items-center justify-center text-3xl font-inter text-gray-700 hover:text-gray-500 font-light;
+	@apply flex items-center justify-center text-3xl font-chivo text-gray-700 hover:text-gray-500 font-light;
 }
 .flex-center {
 	@apply flex justify-center items-center;

@@ -19,7 +19,8 @@ module.exports = {
 			},
 			animation: {
 				'fade-right': 'fade-right 0.6s ease-in-out forwards',
-				'fade-in': 'fade-in 1.2s ease-in-out forwards',
+				'fade-in': 'fade-in 0.2s ease-in-out forwards',
+				'fade-up': 'fade-up 0.6s ease-in-out forwards',
 			},
 			keyframes: {
 				'fade-right': {
@@ -30,6 +31,17 @@ module.exports = {
 
 					to: {
 						transform: 'translateX(0%)',
+						opacity: '100%',
+					},
+				},
+				'fade-up': {
+					from: {
+						transform: 'translateY(10%)',
+						opacity: '0%',
+					},
+
+					to: {
+						transform: 'translateY(0%)',
 						opacity: '100%',
 					},
 				},

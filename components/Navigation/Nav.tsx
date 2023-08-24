@@ -42,7 +42,7 @@ const Nav = () => {
 						</svg>
 					</button>
 					{toggleDropdown && (
-						<div className='dropdown pt-3'>
+						<div className='dropdown pt-3 animate-fade-in'>
 							<div className='flex flex-row w-full justify-between'>
 								<Logo />
 								<button onClick={() => setToggleDropdown(!toggleDropdown)}>

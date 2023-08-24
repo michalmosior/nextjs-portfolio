@@ -1,5 +1,14 @@
+import About from '@/components/About/About';
 import Header from '@/components/Header/Header';
+import type { NextPage } from 'next';
 
-export default function Home() {
-	return <Header />;
-}
+const Home: NextPage = () => {
+	return (
+		<>
+			<Header />
+			<About />
+		</>
+	);
+};
+
+export default Home;

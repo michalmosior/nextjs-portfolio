@@ -14,14 +14,20 @@
 .desc {
 	@apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl lg:text-3xl;
 }
+.description {
+	@apply mb-5 text-base lg:text-2xl;
+}
 .dropdown {
-	@apply absolute left-[-24px] h-screen top-0 w-screen px-6 pb-20 bg-white flex flex-col gap-5 justify-between items-start z-0;
+	@apply absolute left-[-24px] h-screen top-0 w-screen px-6 pb-20 bg-white flex flex-col gap-5 justify-between items-start z-10;
 }
 .dropdown_link {
 	@apply text-3xl font-chivo text-gray-700 hover:text-gray-500 font-light;
 }
 .menu_link {
 	@apply flex items-center justify-center text-3xl font-chivo text-gray-700 hover:text-gray-500 font-light;
+}
+.section_title {
+	@apply my-5 text-3xl leading-[1.15] text-black sm:text-6xl;
 }
 .flex-center {
 	@apply flex justify-center items-center;

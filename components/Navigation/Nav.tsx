@@ -66,7 +66,7 @@ const Nav = () => {
 										href={item.href}
 										className='dropdown_link animate-fade-right'
 										style={{
-											['animation-duration' as any]: `${
+											['animationDuration' as any]: `${
 												i === 0 ? '0.6' : `${i === 1 ? '0.9' : '1.2'}`
 											}s`,
 										}}

@@ -1,6 +1,15 @@
+import { SkillInterface } from '@/types/types';
 import DecorationSpan from '../DecorationSpan';
+import Image from 'next/image';
 
-const About = () => {
+const fetchSkills = async () => {
+	const response = await fetch('http://127.0.0.1:3000/api/skills');
+	const skills: SkillInterface[] = await response.json();
+	return skills;
+};
+
+const About: any = async () => {
+	const skills = await fetchSkills();
 	return (
 		<section id='about' className='section'>
 			<div className='max-w-screen-xl'>
@@ -35,7 +44,7 @@ const About = () => {
 					<div className='flex-center flex-col lg:w-1/2'>
 						<h3 className='text-2xl mb-4'>Tech stack</h3>
 						<ul className='list-none flex-center flex-row flex-wrap w-full gap-5'>
-							{/*{allSkills.map((skill) => {
+							{skills.map((skill) => {
 								return (
 									<li
 										className='flex flex-col items-center justify-center mb-3 w-1/5'
@@ -50,12 +59,12 @@ const About = () => {
 											className='object-contain'
 											style={{ width: '80%', height: 'auto' }}
 										/>
-										<span className='capitalize text-center'>
+										<span className='capitalize text-center text-xs'>
 											{skill.title}
 										</span>
 									</li>
 								);
-							})}*/}
+							})}
 						</ul>
 					</div>
 				</div>

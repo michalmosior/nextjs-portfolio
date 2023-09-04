@@ -1,12 +1,12 @@
 import { Schema, model, models } from 'mongoose';
-import { Skill } from '@/types/types';
+import { SkillInterface } from '@/types/types';
 
-const SkillSchema = new Schema<Skill>({
+const SkillSchema = new Schema<SkillInterface>({
 	title: {
 		type: String,
 		required: true,
 	},
-	image: {
+	path: {
 		type: String,
 		required: true,
 	},
